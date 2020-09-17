@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bayesNet>
+  <bnVariables>
+    <discreteVariable name="A" index="0" x="135" y="120">
+      <category name="0" index="0"/>
+      <category name="1" index="1"/>
+    </discreteVariable>
+    <discreteVariable name="S" index="1" x="270" y="195">
+      <category name="0" index="0"/>
+      <category name="1" index="1"/>
+    </discreteVariable>
+    <discreteVariable name="N" index="2" x="301" y="301">
+      <category name="0" index="0"/>
+      <category name="1" index="1"/>
+    </discreteVariable>
+    <discreteVariable name="M" index="3" x="120" y="300">
+      <category name="0" index="0"/>
+      <category name="1" index="1"/>
+    </discreteVariable>
+    <discreteVariable name="Y" index="4" x="210" y="390">
+      <category name="0" index="0"/>
+      <category name="1" index="1"/>
+    </discreteVariable>
+    <discreteVariable name="UA" index="5" latent="yes" x="180" y="75">
+      <category name="0" index="0"/>
+      <category name="1" index="1"/>
+      <category name="2" index="2"/>
+      <category name="3" index="3"/>
+      <category name="4" index="4"/>
+    </discreteVariable>
+    <discreteVariable name="US" index="6" latent="yes" x="286" y="138">
+      <category name="0" index="0"/>
+      <category name="1" index="1"/>
+      <category name="2" index="2"/>
+      <category name="3" index="3"/>
+      <category name="4" index="4"/>
+    </discreteVariable>
+    <discreteVariable name="UN" index="7" latent="yes" x="360" y="255">
+      <category name="0" index="0"/>
+      <category name="1" index="1"/>
+      <category name="2" index="2"/>
+      <category name="3" index="3"/>
+      <category name="4" index="4"/>
+    </discreteVariable>
+    <discreteVariable name="UM" index="8" latent="yes" x="75" y="240">
+      <category name="0" index="0"/>
+      <category name="1" index="1"/>
+      <category name="2" index="2"/>
+      <category name="3" index="3"/>
+      <category name="4" index="4"/>
+    </discreteVariable>
+    <discreteVariable name="UY" index="9" latent="yes" x="286" y="362">
+      <category name="0" index="0"/>
+      <category name="1" index="1"/>
+      <category name="2" index="2"/>
+      <category name="3" index="3"/>
+      <category name="4" index="4"/>
+    </discreteVariable>
+  </bnVariables>
+  <parents>
+    <parentsFor name="A">
+      <parent name="UA" index="0"/>
+    </parentsFor>
+    <parentsFor name="S">
+      <parent name="A" index="0"/>
+      <parent name="US" index="1"/>
+    </parentsFor>
+    <parentsFor name="N">
+      <parent name="A" index="0"/>
+      <parent name="S" index="1"/>
+      <parent name="UN" index="2"/>
+    </parentsFor>
+    <parentsFor name="M">
+      <parent name="A" index="0"/>
+      <parent name="S" index="1"/>
+      <parent name="UM" index="2"/>
+    </parentsFor>
+    <parentsFor name="Y">
+      <parent name="A" index="0"/>
+      <parent name="S" index="1"/>
+      <parent name="N" index="2"/>
+      <parent name="M" index="3"/>
+      <parent name="UY" index="4"/>
+    </parentsFor>
+    <parentsFor name="UA"/>
+    <parentsFor name="US"/>
+    <parentsFor name="UN"/>
+    <parentsFor name="UM"/>
+    <parentsFor name="UY"/>
+  </parents>
+  <cpts rowSumTolerance="0.0001">
+    <cpt variable="A" numRows="5" numCols="2">
+      <row>0.3587 0.6413</row>
+      <row>0.5737 0.4263</row>
+      <row>0.2025 0.7975</row>
+      <row>0.8958 0.1042</row>
+      <row>0.4930 0.5070</row>
+    </cpt>
+    <cpt variable="S" numRows="10" numCols="2">
+      <row>0.1297 0.8703</row>
+      <row>0.7953 0.2047</row>
+      <row>0.2302 0.7698</row>
+      <row>0.1322 0.8678</row>
+      <row>0.4010 0.5990</row>
+      <row>0.3136 0.6864</row>
+      <row>0.2066 0.7934</row>
+      <row>0.1053 0.8947</row>
+      <row>0.3211 0.6789</row>
+      <row>0.7799 0.2201</row>
+    </cpt>
+    <cpt variable="N" numRows="20" numCols="2">
+      <row>0.9719 0.0281</row>
+      <row>0.0138 0.9862</row>
+      <row>0.0035 0.9965</row>
+      <row>0.0211 0.9789</row>
+      <row>0.9795 0.0205</row>
+      <row>0.0133 0.9867</row>
+      <row>0.0578 0.9422</row>
+      <row>0.0302 0.9698</row>
+      <row>0.9919 0.0081</row>
+      <row>0.0088 0.9912</row>
+      <row>0.9679 0.0321</row>
+      <row>0.9989 0.0011</row>
+      <row>0.0419 0.9581</row>
+      <row>0.0314 0.9686</row>
+      <row>0.9998 0.0002</row>
+      <row>0.9765 0.0235</row>
+      <row>0.9946 0.0054</row>
+      <row>0.9963 0.0037</row>
+      <row>0.0226 0.9774</row>
+      <row>0.0071 0.9929</row>
+    </cpt>
+    <cpt variable="M" numRows="20" numCols="2">
+      <row>0.0031 0.9969</row>
+      <row>0.0297 0.9703</row>
+      <row>0.0071 0.9929</row>
+      <row>0.0086 0.9914</row>
+      <row>0.9999 0.0001</row>
+      <row>0.9999 0.0001</row>
+      <row>0.0292 0.9708</row>
+      <row>0.9708 0.0292</row>
+      <row>0.0113 0.9887</row>
+      <row>0.9977 0.0023</row>
+      <row>0.0064 0.9936</row>
+      <row>0.9991 0.0009</row>
+      <row>0.9987 0.0013</row>
+      <row>0.9594 0.0406</row>
+      <row>0.9995 0.0005</row>
+      <row>0.9950 0.0050</row>
+      <row>0.0357 0.9643</row>
+      <row>0.9921 0.0079</row>
+      <row>0.0076 0.9924</row>
+      <row>0.9876 0.0124</row>
+    </cpt>
+    <cpt variable="Y" numRows="80" numCols="2">
+      <row>0.0397 0.9603</row>
+      <row>0.9994 0.0006</row>
+      <row>0.0101 0.9899</row>
+      <row>0.9828 0.0172</row>
+      <row>0.9898 0.0102</row>
+      <row>0.0043 0.9957</row>
+      <row>0.9997 0.0003</row>
+      <row>0.0159 0.9841</row>
+      <row>0.0261 0.9739</row>
+      <row>0.9537 0.0463</row>
+      <row>0.9768 0.0232</row>
+      <row>0.9391 0.0609</row>
+      <row>0.0580 0.9420</row>
+      <row>0.0130 0.9870</row>
+      <row>0.9711 0.0289</row>
+      <row>0.0325 0.9675</row>
+      <row>0.0189 0.9811</row>
+      <row>0.9899 0.0101</row>
+      <row>0.0290 0.9710</row>
+      <row>0.9840 0.0160</row>
+      <row>0.9846 0.0154</row>
+      <row>0.9805 0.0195</row>
+      <row>0.9933 0.0067</row>
+      <row>0.0330 0.9670</row>
+      <row>0.0107 0.9893</row>
+      <row>0.9840 0.0160</row>
+      <row>0.0323 0.9677</row>
+      <row>0.0340 0.9660</row>
+      <row>0.0155 0.9845</row>
+      <row>0.9772 0.0228</row>
+      <row>0.0087 0.9913</row>
+      <row>0.9940 0.0060</row>
+      <row>0.9663 0.0337</row>
+      <row>0.9854 0.0146</row>
+      <row>0.9030 0.0970</row>
+      <row>0.9915 0.0085</row>
+      <row>0.9466 0.0534</row>
+      <row>0.9567 0.0433</row>
+      <row>0.0258 0.9742</row>
+      <row>0.0317 0.9683</row>
+      <row>0.9968 0.0032</row>
+      <row>0.0037 0.9963</row>
+      <row>0.0162 0.9838</row>
+      <row>0.0270 0.9730</row>
+      <row>0.9855 0.0145</row>
+      <row>0.0093 0.9907</row>
+      <row>0.9797 0.0203</row>
+      <row>0.0046 0.9954</row>
+      <row>0.9988 0.0012</row>
+      <row>0.9793 0.0207</row>
+      <row>0.9187 0.0813</row>
+      <row>0.0509 0.9491</row>
+      <row>0.9784 0.0216</row>
+      <row>0.9063 0.0937</row>
+      <row>0.0251 0.9749</row>
+      <row>0.9403 0.0597</row>
+      <row>0.0009 0.9991</row>
+      <row>0.0077 0.9923</row>
+      <row>0.0006 0.9994</row>
+      <row>0.9977 0.0023</row>
+      <row>0.9924 0.0076</row>
+      <row>0.9866 0.0134</row>
+      <row>0.9923 0.0077</row>
+      <row>0.9936 0.0064</row>
+      <row>0.0292 0.9708</row>
+      <row>0.9835 0.0165</row>
+      <row>0.9832 0.0168</row>
+      <row>0.9501 0.0499</row>
+      <row>0.0029 0.9971</row>
+      <row>0.0013 0.9987</row>
+      <row>0.0089 0.9911</row>
+      <row>0.9832 0.0168</row>
+      <row>0.0008 0.9992</row>
+      <row>0.0097 0.9903</row>
+      <row>0.0080 0.9920</row>
+      <row>0.0021 0.9979</row>
+      <row>0.0312 0.9688</row>
+      <row>0.9802 0.0198</row>
+      <row>0.9774 0.0226</row>
+      <row>0.9776 0.0224</row>
+    </cpt>
+    <cpt variable="UA" numRows="1" numCols="5">
+      <row>0.3745 0.1819 0.1457 0.0467 0.2512</row>
+    </cpt>
+    <cpt variable="US" numRows="1" numCols="5">
+      <row>0.2577 0.1177 0.2814 0.2038 0.1394</row>
+    </cpt>
+    <cpt variable="UN" numRows="1" numCols="5">
+      <row>0.1108 0.2381 0.1679 0.1316 0.3516</row>
+    </cpt>
+    <cpt variable="UM" numRows="1" numCols="5">
+      <row>0.1697 0.2602 0.1637 0.2509 0.1555</row>
+    </cpt>
+    <cpt variable="UY" numRows="1" numCols="5">
+      <row>0.2597 0.1498 0.1821 0.2868 0.1216</row>
+    </cpt>
+  </cpts>
+</bayesNet>

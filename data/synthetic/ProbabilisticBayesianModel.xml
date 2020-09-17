@@ -1,0 +1,84 @@
+<bayesNet>
+  <bnVariables>
+    <discreteVariable index="0" name="A" x="135" y="120">
+      <category index="0" name="0" />
+      <category index="1" name="1" />
+    </discreteVariable>
+    <discreteVariable index="1" name="S" x="270" y="195">
+      <category index="0" name="0" />
+      <category index="1" name="1" />
+    </discreteVariable>
+    <discreteVariable index="2" name="N" x="301" y="301">
+      <category index="0" name="0" />
+      <category index="1" name="1" />
+    </discreteVariable>
+    <discreteVariable index="3" name="M" x="120" y="300">
+      <category index="0" name="0" />
+      <category index="1" name="1" />
+    </discreteVariable>
+    <discreteVariable index="4" name="Y" x="210" y="390">
+      <category index="0" name="0" />
+      <category index="1" name="1" />
+    </discreteVariable>
+    </bnVariables>
+  <parents>
+    <parentsFor name="A">
+      </parentsFor>
+    <parentsFor name="S">
+      <parent index="0" name="A" />
+      </parentsFor>
+    <parentsFor name="N">
+      <parent index="0" name="A" />
+      <parent index="1" name="S" />
+      </parentsFor>
+    <parentsFor name="M">
+      <parent index="0" name="A" />
+      <parent index="1" name="S" />
+      </parentsFor>
+    <parentsFor name="Y">
+      <parent index="0" name="A" />
+      <parent index="1" name="S" />
+      <parent index="2" name="N" />
+      <parent index="3" name="M" />
+      </parentsFor>
+    </parents>
+  <cpts rowSumTolerance="0.0001">
+    <cpt numCols="2" numRows="1" variable="A">
+      <row>0.808 0.192</row>
+      </cpt>
+    <cpt numCols="2" numRows="2" variable="S">
+      <row>0.742 0.258</row>
+      <row>0.678 0.322</row>
+      </cpt>
+    <cpt numCols="2" numRows="4" variable="N">
+      <row>0.648 0.352</row>
+      <row>0.238 0.762</row>
+      <row>0.520 0.480</row>
+      <row>0.111 0.889</row>
+      </cpt>
+    <cpt numCols="2" numRows="4" variable="M">
+      <row>0.667 0.333</row>
+      <row>0.845 0.156</row>
+      <row>0.845 0.156</row>
+      <row>0.164 0.836</row>
+      </cpt>
+    <cpt numCols="2" numRows="16" variable="Y">
+      <row>0.453 0.546</row>
+      <row>0.592 0.408</row>
+      <row>0.668 0.332</row>
+      <row>0.619 0.381</row>
+      <row>0.563 0.437</row>
+      <row>0.546 0.453</row>
+      <row>0.000 1.000</row>
+      <row>0.381 0.619</row>
+      <row>0.469 0.531</row>
+      <row>0.558 0.442</row>
+      <row>0.182 0.818</row>
+      <row>0.558 0.442</row>
+      <row>0.453 0.546</row>
+      <row>0.453 0.546</row>
+      <row>0.150 0.850</row>
+      <row>0.408 0.592</row>
+      </cpt>
+    </cpts>
+</bayesNet>
