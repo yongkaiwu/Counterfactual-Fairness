@@ -1,6 +1,6 @@
 # Readme
 
-This is n implementation for [Counterfactual Fairness: Unidentification, Bound and Algorithm](https://doi.org/10.24963/ijcai.2019/199) in IJCAI 2019.
+This is an implementation for [Counterfactual Fairness: Unidentification, Bound and Algorithm](https://doi.org/10.24963/ijcai.2019/199) in IJCAI 2019.
 
 ## Development
 
@@ -9,13 +9,13 @@ This is n implementation for [Counterfactual Fairness: Unidentification, Bound a
 
 ## Reproduction
 
-To re-produce this repository:
+To reproduce this repository:
 
 1. Recover the environment by `conda env create --file environment.yml --name YOUR_ENV_NAME`.
 2. Run
    1. `python synthetic_detect.py` to get Table 1;
-   2. `python synthetic_fair_classification.py` to get Table 2 and 3;
-   3. `python adult_fair_classification.py` to get Table 4 and 5.
+   2. `python synthetic_fair_classification.py` to get Tables 2 and 3;
+   3. `python adult_fair_classification.py` to get Tables 4 and 5.
 
 ## BibTex
 
